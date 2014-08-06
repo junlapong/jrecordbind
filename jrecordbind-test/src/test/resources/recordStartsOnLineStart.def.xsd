@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema targetNamespace="http://schemas.assist-si.it/jrb/recordStartsOnLineStart" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.assist-si.it/jrb/recordStartsOnLineStart" xmlns:jrb="http://jrecordbind.dev.java.net/2/xsd" elementFormDefault="qualified" attributeFormDefault="unqualified">
+<xs:schema targetNamespace="http://schemas.assist-si.it/jrb/recordStartsOnLineStart" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.assist-si.it/jrb/recordStartsOnLineStart" xmlns:jrb="http://jrecordbind.org/3/xsd" elementFormDefault="qualified" attributeFormDefault="unqualified">
   <xs:complexType name="RecordA">
     <xs:sequence>
       <xs:element name="recordType" type="xs:string" fixed="01" jrb:length="2"/>

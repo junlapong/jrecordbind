@@ -42,16 +42,16 @@ JRecordBind needs that specification: it's the starting point. You need to map t
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema targetNamespace="http://schemas.assist-si.it/jrb/simple" xmlns:xs="http://www.w3.org/2001/XMLSchema" 
-  xmlns="http://schemas.assist-si.it/jrb/simple" xmlns:jrb="http://jrecordbind.dev.java.net/2/xsd" 
+  xmlns="http://schemas.assist-si.it/jrb/simple" xmlns:jrb="http://jrecordbind.org/3/xsd" 
   elementFormDefault="qualified" attributeFormDefault="unqualified">
   <xs:complexType name="SimpleRecord">
     <xs:sequence>
       <xs:element name="name" type="xs:string" jrb:length="20"/>
       <xs:element name="surname" type="xs:string" jrb:length="20"/>
       <xs:element name="taxCode" type="xs:string" jrb:length="16"/>
-      <xs:element name="birthday" type="xs:date" jrb:length="8" jrb:converter="it.assist.jrecordbind.test.SimpleRecordDateConverter"/>
+      <xs:element name="birthday" type="xs:date" jrb:length="8" jrb:converter="org.jrecordbind.test.SimpleRecordDateConverter"/>
       <xs:element name="oneInteger" type="xs:int" jrb:length="2"/>
-      <xs:element name="oneFloat" type="xs:float" jrb:length="3" jrb:converter="it.assist.jrecordbind.test.SimpleRecordFloatConverter"/>
+      <xs:element name="oneFloat" type="xs:float" jrb:length="3" jrb:converter="org.jrecordbind.test.SimpleRecordFloatConverter"/>
     </xs:sequence>
   </xs:complexType>
   <xs:element name="main" type="SimpleRecord" jrb:length="100"/>
@@ -222,7 +222,7 @@ Since version 2.1, you can omit the `jrb:length` attribute while specifying the 
 
 Since version 2.2 JRecordBind supports the `jrb:subclass` attribute at the `xs:complexType` level. By specifying the fully qualified name of a class extending the generated class, JRecordBind will instantiate that class instead of its generated one, allowing you to extend/override the generated class.
 
-Click [here](https://github.com/ffissore/jrecordbind/blob/master/jrecordbind-test/src/test/resources/generationGap.def.xsd) for an xsd example and [here](https://github.com/ffissore/jrecordbind/blob/master/jrecordbind-test/src/test/java/it/assist/jrecordbind/test/MyGGEnumRecord.java) for a class example.
+Click [here](https://github.com/ffissore/jrecordbind/blob/master/jrecordbind-test/src/test/resources/generationGap.def.xsd) for an xsd example and [here](https://github.com/ffissore/jrecordbind/blob/master/jrecordbind-test/src/test/java/org/jrecordbind/test/MyGGEnumRecord.java) for a class example.
 
 ## How to: using xs:choice with choiceContentProperty='true'
 
@@ -240,7 +240,7 @@ When the `Unmarshaller` reads from the file, by default it returns the current l
 
 Since version 2.3.3, if you want to customize this behaviour, you can create a new `Unmarshaller` passing your implementation of the `LineReader` interface.
 
-[Check out this test for an example](https://github.com/ffissore/jrecordbind/blob/master/jrecordbind-test/src/test/java/it/assist/jrecordbind/test/SimpleRecordUnmarshallNotPaddedLineReaderTest.java)
+[Check out this test for an example](https://github.com/ffissore/jrecordbind/blob/master/jrecordbind-test/src/test/java/org/jrecordbind/test/SimpleRecordUnmarshallNotPaddedLineReaderTest.java)
 
 ## How to: use a custom line separator (aka producing DOS format files)
 
@@ -276,7 +276,7 @@ Java 6 users will add:
 
 ```xml
 <dependency>
-  <groupId>it.assist.jrecordbind</groupId>
+  <groupId>org.jrecordbind</groupId>
   <artifactId>jrecordbind</artifactId>
   <version>2.3.7</version>
 </dependency>
@@ -286,7 +286,7 @@ Java 1.5 users will add:
 
 ```xml
 <dependency>
-  <groupId>it.assist.jrecordbind</groupId>
+  <groupId>org.jrecordbind</groupId>
   <artifactId>jrecordbind</artifactId>
   <version>2.3.7</version>
   <classifier>jdk5</classifier>

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>it.assist.jrecordbind</groupId>
+  <groupId>org.jrecordbind</groupId>
   <artifactId>jrecordbind-parent</artifactId>
   <packaging>pom</packaging>
   <name>JRecordBind parent module</name>
-  <version>2.3.9-SNAPSHOT</version>
+  <version>3.0.0-SNAPSHOT</version>
   <url>http://jrecordbind.org</url>
   <parent>
     <groupId>net.java</groupId>
@@ -13,19 +13,19 @@
     <version>1</version>
   </parent>
   <issueManagement>
-    <system>JIRA</system>
-    <url>http://java.net/jira/browse/JRECORDBIND</url>
+    <system>Github</system>
+    <url>https://github.com/ffissore/jrecordbind/issues</url>
   </issueManagement>
   <scm>
-    <connection>scm:svn:https://svn.java.net/svn/jrecordbind~svn/trunk</connection>
-    <developerConnection>scm:svn:https://svn.java.net/svn/jrecordbind~svn/trunk</developerConnection>
-    <url>http://java.net/projects/jrecordbind/sources/svn/show</url>
+    <url>https://github.com/ffissore/jrecordbind/</url>
+    <connection>scm:git:https://github.com/ffissore/jrecordbind.git</connection>
+    <developerConnection>scm:git:ssh://github.com/ffissore/jrecordbind.git</developerConnection>
   </scm>
   <developers>
     <developer>
       <name>Federico Fissore</name>
       <id>fridrik</id>
-      <email>fridrik@java.net</email>
+      <email>federico@jrecordbind.org</email>
     </developer>
     <developer>
       <name>Tóth István</name>

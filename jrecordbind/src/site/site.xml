@@ -8,7 +8,7 @@
     <links>
       <item name="Mailing lists" href="http://java.net/projects/jrecordbind/lists"/>
       <item name="Downloads" href="http://java.net/projects/jrecordbind/downloads"/>
-      <item name="Bug tracker" href="http://java.net/jira/browse/JRECORDBIND"/>
+      <item name="Bug tracker" href="https://github.com/ffissore/jrecordbind/issues"/>
     </links>
     <menu name="Project pages">
       <item name="Project home" href="index.html"/>
@@ -16,7 +16,7 @@
     <menu name="Project tools">
       <item name="Mailing lists" href="http://java.net/projects/jrecordbind/lists"/>
       <item name="Downloads" href="http://java.net/projects/jrecordbind/downloads"/>
-      <item name="Bug tracker" href="http://java.net/jira/browse/JRECORDBIND"/>
+      <item name="Bug tracker" href="https://github.com/ffissore/jrecordbind/issues"/>
       <item name="JavaDoc" href="apidocs/index.html"/>
     </menu>
     <menu ref="reports"/>
