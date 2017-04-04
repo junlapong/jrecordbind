@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema targetNamespace="http://schemas.assist-si.it/jrb/deep_hierarchy" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.assist-si.it/jrb/deep_hierarchy" xmlns:jrb="http://jrecordbind.dev.java.net/2/xsd" elementFormDefault="qualified" attributeFormDefault="unqualified">
+<xs:schema targetNamespace="http://schemas.jrecordbind.org/jrb/deep_hierarchy" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.jrecordbind.org/jrb/deep_hierarchy" xmlns:jrb="http://jrecordbind.org/3/xsd" elementFormDefault="qualified" attributeFormDefault="unqualified">
   <xs:complexType name="GrandChild">
     <xs:sequence>
       <xs:element name="recordId" type="xs:string" fixed="002" jrb:length="3"/>
@@ -21,5 +21,5 @@
       <xs:element name="grandChildren" type="GrandChild" minOccurs="0" maxOccurs="unbounded"/>
     </xs:sequence>
   </xs:complexType>
-  <xs:element name="main" type="Father" jrb:delimiter="|" jrb:length="6" jrb:padder="it.assist.jrecordbind.padders.ZeroLeftPadder"/>
+  <xs:element name="main" type="Father" jrb:delimiter="|" jrb:length="6" jrb:padder="org.fissore.jrecordbind.padders.ZeroLeftPadder"/>
 </xs:schema>

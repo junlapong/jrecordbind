@@ -41,17 +41,17 @@ JRecordBind needs that specification: it's the starting point. You need to map t
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema targetNamespace="http://schemas.assist-si.it/jrb/simple" xmlns:xs="http://www.w3.org/2001/XMLSchema" 
-  xmlns="http://schemas.assist-si.it/jrb/simple" xmlns:jrb="http://jrecordbind.dev.java.net/2/xsd" 
+<xs:schema targetNamespace="http://schemas.jrecordbind.org/jrb/simple" xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+  xmlns="http://schemas.jrecordbind.org/jrb/simple" xmlns:jrb="http://jrecordbind.org/3/xsd" 
   elementFormDefault="qualified" attributeFormDefault="unqualified">
   <xs:complexType name="SimpleRecord">
     <xs:sequence>
       <xs:element name="name" type="xs:string" jrb:length="20"/>
       <xs:element name="surname" type="xs:string" jrb:length="20"/>
       <xs:element name="taxCode" type="xs:string" jrb:length="16"/>
-      <xs:element name="birthday" type="xs:date" jrb:length="8" jrb:converter="it.assist.jrecordbind.test.SimpleRecordDateConverter"/>
+      <xs:element name="birthday" type="xs:date" jrb:length="8" jrb:converter="org.fissore.jrecordbind.test.SimpleRecordDateConverter"/>
       <xs:element name="oneInteger" type="xs:int" jrb:length="2"/>
-      <xs:element name="oneFloat" type="xs:float" jrb:length="3" jrb:converter="it.assist.jrecordbind.test.SimpleRecordFloatConverter"/>
+      <xs:element name="oneFloat" type="xs:float" jrb:length="3" jrb:converter="org.fissore.jrecordbind.test.SimpleRecordFloatConverter"/>
     </xs:sequence>
   </xs:complexType>
   <xs:element name="main" type="SimpleRecord" jrb:length="100"/>
@@ -276,19 +276,8 @@ Java 6 users will add:
 
 ```xml
 <dependency>
-  <groupId>it.assist.jrecordbind</groupId>
+  <groupId>org.fissore.jrecordbind</groupId>
   <artifactId>jrecordbind</artifactId>
-  <version>2.3.7</version>
-</dependency>
-```
-
-Java 1.5 users will add:
-
-```xml
-<dependency>
-  <groupId>it.assist.jrecordbind</groupId>
-  <artifactId>jrecordbind</artifactId>
-  <version>2.3.7</version>
-  <classifier>jdk5</classifier>
+  <version>3.0.0-SNAPSHOT</version>
 </dependency>
 ```

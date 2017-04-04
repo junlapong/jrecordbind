@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema targetNamespace="http://analitika.crm.acs.hu/GiroFelhki" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://analitika.crm.acs.hu/GiroFelhki" xmlns:jrb="http://jrecordbind.dev.java.net/2/xsd" elementFormDefault="qualified" attributeFormDefault="unqualified">
+<xs:schema targetNamespace="http://analitika.crm.acs.hu/GiroFelhki" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://analitika.crm.acs.hu/GiroFelhki" xmlns:jrb="http://jrecordbind.org/3/xsd" elementFormDefault="qualified" attributeFormDefault="unqualified">
   <xs:complexType name="GiroFelhkiFejRekord">
     <xs:sequence>
       <xs:element name="rekordtipus" type="xs:string" fixed="01" jrb:length="2"/>
       <xs:element name="uzenettipus" type="xs:string" fixed="FELHKI" jrb:length="6"/>
       <xs:element name="duplumkod" type="xs:int" jrb:length="1"/>
-      <xs:element name="FelhkiOsszeallitasDatuma" type="xs:date" jrb:length="8" jrb:converter="it.assist.jrecordbind.test.SimpleRecordDateConverter"/>
-      <xs:element name="FelhkiSorszam" type="xs:int" jrb:length="4" jrb:padder="it.assist.jrecordbind.padders.ZeroLeftPadder"/>
+      <xs:element name="FelhkiOsszeallitasDatuma" type="xs:date" jrb:length="8" jrb:converter="org.fissore.jrecordbind.test.SimpleRecordDateConverter"/>
+      <xs:element name="FelhkiSorszam" type="xs:int" jrb:length="4" jrb:padder="org.fissore.jrecordbind.padders.ZeroLeftPadder"/>
       <xs:element name="FelhkiIdopontja" type="xs:string" jrb:length="6"/>
       <xs:element name="szolgaltatoKodja" type="xs:string" jrb:length="13"/>
     </xs:sequence>
@@ -14,27 +14,27 @@
   <xs:complexType name="GiroFelhkiAlcsoportFej">
     <xs:sequence>
       <xs:element name="rekordtipus" type="xs:string" fixed="02" jrb:length="2"/>
-      <xs:element name="AlcsoportAzonosito" type="xs:string" jrb:length="25" jrb:padder="it.assist.jrecordbind.padders.ZeroLeftPadder"/>
-      <xs:element name="inditoBankNeve" type="xs:string" jrb:length="35" jrb:padder="it.assist.jrecordbind.padders.ZeroLeftPadder"/>
+      <xs:element name="AlcsoportAzonosito" type="xs:string" jrb:length="25" jrb:padder="org.fissore.jrecordbind.padders.ZeroLeftPadder"/>
+      <xs:element name="inditoBankNeve" type="xs:string" jrb:length="35" jrb:padder="org.fissore.jrecordbind.padders.ZeroLeftPadder"/>
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="GiroFelhkiJoFelhatTetel">
     <xs:sequence>
       <xs:element name="rekordtipus" type="xs:string" fixed="03" jrb:length="2"/>
-      <xs:element name="felhbeFelhat" type="xs:string" jrb:length="279" jrb:padder="it.assist.jrecordbind.padders.ZeroLeftPadder"/>
+      <xs:element name="felhbeFelhat" type="xs:string" jrb:length="279" jrb:padder="org.fissore.jrecordbind.padders.ZeroLeftPadder"/>
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="GiroFelhkiAlcsoportLab">
     <xs:sequence>
       <xs:element name="rekordtipus" type="xs:string" fixed="04" jrb:length="2"/>
-      <xs:element name="alcsoportbeliFelhatTetelekSzama" type="xs:int" jrb:length="4" jrb:padder="it.assist.jrecordbind.padders.ZeroLeftPadder"/>
+      <xs:element name="alcsoportbeliFelhatTetelekSzama" type="xs:int" jrb:length="4" jrb:padder="org.fissore.jrecordbind.padders.ZeroLeftPadder"/>
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="GiroFelhkiLabRekord">
     <xs:sequence>
       <xs:element name="rekordtipus" type="xs:string" fixed="05" jrb:length="2"/>
-      <xs:element name="AlcsoportokSzama" type="xs:int" jrb:length="2" jrb:padder="it.assist.jrecordbind.padders.ZeroLeftPadder"/>
-      <xs:element name="FelhatTetelekSzamaOsszesen" type="xs:long" jrb:length="6" jrb:padder="it.assist.jrecordbind.padders.ZeroLeftPadder"/>
+      <xs:element name="AlcsoportokSzama" type="xs:int" jrb:length="2" jrb:padder="org.fissore.jrecordbind.padders.ZeroLeftPadder"/>
+      <xs:element name="FelhatTetelekSzamaOsszesen" type="xs:long" jrb:length="6" jrb:padder="org.fissore.jrecordbind.padders.ZeroLeftPadder"/>
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="GiroFelhki">

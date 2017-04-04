@@ -140,17 +140,17 @@ pre.java span.line_number {
           <p>JRecordBind needs that specification: it's the starting point. You need to map the documentation into an XSD file. Here's an example:</p>
 <pre>
 &lt;?xml version="1.0" encoding="UTF-8"?&gt;
-&lt;xs:schema targetNamespace="http://schemas.assist-si.it/jrb/simple" xmlns:xs="http://www.w3.org/2001/XMLSchema" 
-  xmlns="http://schemas.assist-si.it/jrb/simple" xmlns:jrb="http://jrecordbind.dev.java.net/2/xsd" 
+&lt;xs:schema targetNamespace="http://schemas.jrecordbind.org/jrb/simple" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  xmlns="http://schemas.jrecordbind.org/jrb/simple" xmlns:jrb="http://jrecordbind.org/3/xsd"
   elementFormDefault="qualified" attributeFormDefault="unqualified"&gt;
   &lt;xs:complexType name="SimpleRecord"&gt;
     &lt;xs:sequence&gt;
       &lt;xs:element name="name" type="xs:string" jrb:length="20"/&gt;
       &lt;xs:element name="surname" type="xs:string" jrb:length="20"/&gt;
       &lt;xs:element name="taxCode" type="xs:string" jrb:length="16"/&gt;
-      &lt;xs:element name="birthday" type="xs:date" jrb:length="8" jrb:converter="it.assist.jrecordbind.test.SimpleRecordDateConverter"/&gt;
+      &lt;xs:element name="birthday" type="xs:date" jrb:length="8" jrb:converter="org.fissore.jrecordbind.test.SimpleRecordDateConverter"/&gt;
       &lt;xs:element name="oneInteger" type="xs:int" jrb:length="2"/&gt;
-      &lt;xs:element name="oneFloat" type="xs:float" jrb:length="3" jrb:converter="it.assist.jrecordbind.test.SimpleRecordFloatConverter"/&gt;
+      &lt;xs:element name="oneFloat" type="xs:float" jrb:length="3" jrb:converter="org.fissore.jrecordbind.test.SimpleRecordFloatConverter"/&gt;
     &lt;/xs:sequence&gt;
   &lt;/xs:complexType&gt;
   &lt;xs:element name="main" type="SimpleRecord" jrb:length="100"/&gt;
@@ -341,17 +341,9 @@ Check out <a href="http://java.net/projects/jrecordbind/sources/svn/content/trun
         <p>Java 6 users will add:</p>
         <pre>
 &lt;dependency&gt;
-  &lt;groupId&gt;it.assist.jrecordbind&lt;/groupId&gt;
+  &lt;groupId&gt;org.fissore.jrecordbind&lt;/groupId&gt;
   &lt;artifactId&gt;jrecordbind&lt;/artifactId&gt;
-  &lt;version&gt;2.3.7&lt;/version&gt;
-&lt;/dependency&gt;</pre>
-        <p>Java 1.5 users will add:</p>
-        <pre>
-&lt;dependency&gt;
-  &lt;groupId&gt;it.assist.jrecordbind&lt;/groupId&gt;
-  &lt;artifactId&gt;jrecordbind&lt;/artifactId&gt;
-  &lt;version&gt;2.3.7&lt;/version&gt;
-  &lt;classifier&gt;jdk5&lt;/classifier&gt;
+  &lt;version&gt;3.0.0-SNAPSHOT&lt;/version&gt;
 &lt;/dependency&gt;</pre>
       </subsection>
     </section>

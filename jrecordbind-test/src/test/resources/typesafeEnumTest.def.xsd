@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema
-  xmlns="http://schemas.assist-si.it/jrb/typesafeEnumTest"
-  targetNamespace="http://schemas.assist-si.it/jrb/typesafeEnumTest"
+  xmlns="http://schemas.jrecordbind.org/jrb/typesafeEnumTest"
+  targetNamespace="http://schemas.jrecordbind.org/jrb/typesafeEnumTest"
   xmlns:xs="http://www.w3.org/2001/XMLSchema"
-  xmlns:jrb="http://jrecordbind.dev.java.net/2/xsd"
+  xmlns:jrb="http://jrecordbind.org/3/xsd"
   xmlns:jxb="http://java.sun.com/xml/ns/jaxb"
   jxb:version="2.0"
   elementFormDefault="qualified" attributeFormDefault="unqualified">
@@ -18,7 +18,7 @@
   </xs:complexType>
 
 
-  <xs:simpleType name="EnumOne" jrb:converter="it.assist.jrecordbind.test.TypesafeEnumTestConverters$EnumOneConverter">
+  <xs:simpleType name="EnumOne" jrb:converter="org.fissore.jrecordbind.test.TypesafeEnumTestConverters$EnumOneConverter">
     <xs:annotation>
       <xs:appinfo>
         <jxb:typesafeEnumClass />
@@ -63,7 +63,7 @@
     </xs:restriction>
   </xs:simpleType>
 
-  <xs:simpleType name="EnumTwo" jrb:converter="it.assist.jrecordbind.test.TypesafeEnumTestConverters$EnumTwoConverter">
+  <xs:simpleType name="EnumTwo" jrb:converter="org.fissore.jrecordbind.test.TypesafeEnumTestConverters$EnumTwoConverter">
     <xs:restriction base="xs:string">
       <xs:enumeration value="ONE" />
       <xs:enumeration value="TWO" />
